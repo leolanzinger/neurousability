@@ -40,7 +40,7 @@ $(document).ready(function(){
 		for(var i = length-1; i>=0; i--)
 		{
 			//This will create a horizontal snake starting from the top left
-			snake_array.push({x: i, y:0});
+			snake_array.push({x: i, y:20});
 		}
 	}
 	
@@ -60,9 +60,9 @@ $(document).ready(function(){
 	{
 		//To avoid the snake trail we need to paint the BG on every frame
 		//Lets paint the canvas now
-		ctx.fillStyle = "white";
+		ctx.fillStyle = "#fd6a62";
 		ctx.fillRect(0, 0, w, h);
-		ctx.strokeStyle = "black";
+		ctx.strokeStyle = "#333";
 		ctx.strokeRect(0, 0, w, h);
 		
 		//The movement code for the snake to come here.
@@ -128,7 +128,7 @@ $(document).ready(function(){
 	//Lets first create a generic function to paint cells
 	function paint_cell(x, y)
 	{
-		ctx.fillStyle = "#3F51B5";
+		ctx.fillStyle = "white";
 		ctx.fillRect(x*cw, y*cw, cw, cw);
 		ctx.strokeStyle = "white";
 		ctx.strokeRect(x*cw, y*cw, cw, cw);
