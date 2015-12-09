@@ -72,7 +72,9 @@ $(document).ready(function() {
 
 
 function loadingInterface(index) {
-	if (owl != null) owl.jumpTo(0);
+	if (owl != null) {
+		owl.jumpTo(0);
+	}
 	setTimeout(
 		function() {
 			$('.pt-page-' + index + ' .loading-page').css({"opacity" : "0"}).delay(500).css({"visibility" : "hidden"});
